@@ -1,5 +1,5 @@
 <% display_payment_methods_list = !payment_method.try(:preferred_3dsecure) && (@methods = payment_method.customer_payment_methods(@order, payment_method_type)).any? %>
-<% paypal = payment_method_type.eql?('paypal') %>
+<% paypal = false //payment_method_type.eql?('paypal') %>
 <% dropin = payment_method_type.eql?('dropin') %>
 <% hosted = payment_method_type.eql?('custom') %>
 
